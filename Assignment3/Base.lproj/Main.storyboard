@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,165 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbD-tb-Bcm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study Helper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCF-2E-HhO">
+                                        <rect key="frame" x="196" y="121" width="208" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="8Em-m5-nPb"/>
+                                            <constraint firstAttribute="width" constant="208" id="NHs-IA-89V"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="33"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="122" y="105" width="164" height="37"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="125" y="93" width="164" height="37"/>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0N-kG-XtG">
+                                        <rect key="frame" x="236" y="364" width="129" height="30"/>
+                                        <color key="backgroundColor" red="0.0012440191623326511" green="0.38663199912265578" blue="0.68216214005235609" alpha="0.53246897163120566" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="21"/>
+                                        <state key="normal" title="Play">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="136" y="224" width="129" height="30"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="156" y="224" width="129" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="hitPlay:" destination="BYZ-38-t0r" eventType="touchDown" id="KcG-MZ-6jr"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGc-Xp-1Y4">
+                                        <rect key="frame" x="236" y="364" width="129" height="30"/>
+                                        <color key="backgroundColor" red="0.0012440191623326511" green="0.38663199912265578" blue="0.68216214005235609" alpha="0.53246897163120566" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="0Gp-EH-mgb"/>
+                                            <constraint firstAttribute="width" constant="129" id="n0k-ou-IZy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="140" y="395" width="129" height="30"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="156" y="592" width="129" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="hitNext:" destination="BYZ-38-t0r" eventType="touchDown" id="C3c-aA-RR2"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeT-V3-wDn">
+                                        <rect key="frame" x="236" y="430" width="129" height="30"/>
+                                        <color key="backgroundColor" red="0.0012440191620000001" green="0.38663199910000001" blue="0.68216214009999998" alpha="0.53246897159999995" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Vvk-87-t0t"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="140" y="395" width="129" height="30"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="156" y="592" width="129" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="goHome:" destination="BYZ-38-t0r" eventType="touchDown" id="Dxh-F6-eWZ"/>
+                                            <action selector="hitNext:" destination="BYZ-38-t0r" eventType="touchDown" id="KTB-RY-lIy"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mai-oE-ngc">
+                                        <rect key="frame" x="157" y="181" width="286" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="Py7-4Z-zgD"/>
+                                            <constraint firstAttribute="width" constant="286" id="aAm-S5-0YI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOk-Nr-mJA">
+                                        <rect key="frame" x="264" y="249" width="73" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="73" id="btD-Hn-Py7"/>
+                                            <constraint firstAttribute="height" constant="22" id="czR-jW-dmv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="24"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Play: Try to define each term within the 30 second time limit. Press Next to go to the next term and reset the timer." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xe-lF-Mvf">
+                                        <rect key="frame" x="166" y="168" width="269" height="155"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="155" id="4yv-eH-XzG"/>
+                                            <constraint firstAttribute="width" constant="269" id="xfg-ds-kUL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="19"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.4054519118329909" green="0.63445066599495981" blue="1" alpha="0.53246897163120566" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="tGc-Xp-1Y4" firstAttribute="top" secondItem="rOk-Nr-mJA" secondAttribute="bottom" constant="93" id="1V7-AP-l8C"/>
+                                    <constraint firstItem="ZCF-2E-HhO" firstAttribute="centerX" secondItem="xbD-tb-Bcm" secondAttribute="centerX" id="3iI-to-15M"/>
+                                    <constraint firstItem="YeT-V3-wDn" firstAttribute="top" secondItem="tGc-Xp-1Y4" secondAttribute="bottom" constant="36" id="A1f-ei-K0M"/>
+                                    <constraint firstItem="tGc-Xp-1Y4" firstAttribute="trailing" secondItem="YeT-V3-wDn" secondAttribute="trailing" id="Aoq-ge-J1J"/>
+                                    <constraint firstItem="tGc-Xp-1Y4" firstAttribute="top" secondItem="4xe-lF-Mvf" secondAttribute="bottom" constant="41" id="PlB-7K-9M0"/>
+                                    <constraint firstItem="tGc-Xp-1Y4" firstAttribute="leading" secondItem="YeT-V3-wDn" secondAttribute="leading" id="R0d-65-3SL"/>
+                                    <constraint firstItem="ZCF-2E-HhO" firstAttribute="centerX" secondItem="Mai-oE-ngc" secondAttribute="centerX" id="TvB-EY-uRm"/>
+                                    <constraint firstItem="rOk-Nr-mJA" firstAttribute="top" secondItem="Mai-oE-ngc" secondAttribute="bottom" constant="36" id="VSZ-fT-XMr"/>
+                                    <constraint firstItem="ZCF-2E-HhO" firstAttribute="top" secondItem="xbD-tb-Bcm" secondAttribute="top" constant="121" id="Xtg-Sw-LZm"/>
+                                    <constraint firstItem="4xe-lF-Mvf" firstAttribute="centerX" secondItem="Mai-oE-ngc" secondAttribute="centerX" id="ZGN-bU-JYk"/>
+                                    <constraint firstItem="rOk-Nr-mJA" firstAttribute="centerX" secondItem="tGc-Xp-1Y4" secondAttribute="centerX" id="Zfb-bF-HTE"/>
+                                    <constraint firstItem="Mai-oE-ngc" firstAttribute="top" secondItem="ZCF-2E-HhO" secondAttribute="bottom" constant="2" id="dU2-o3-DQa"/>
+                                    <constraint firstItem="Mai-oE-ngc" firstAttribute="centerX" secondItem="rOk-Nr-mJA" secondAttribute="centerX" id="e2G-Ct-8gn"/>
+                                    <constraint firstItem="tGc-Xp-1Y4" firstAttribute="bottom" secondItem="e0N-kG-XtG" secondAttribute="bottom" id="eyf-qk-vbv"/>
+                                    <constraint firstItem="e0N-kG-XtG" firstAttribute="trailing" secondItem="tGc-Xp-1Y4" secondAttribute="trailing" id="hRh-Ib-vgH"/>
+                                    <constraint firstItem="tGc-Xp-1Y4" firstAttribute="top" secondItem="e0N-kG-XtG" secondAttribute="top" id="rS1-hJ-w8y"/>
+                                    <constraint firstItem="e0N-kG-XtG" firstAttribute="leading" secondItem="tGc-Xp-1Y4" secondAttribute="leading" id="u13-FI-LbQ"/>
+                                </constraints>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xbD-tb-Bcm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dkV-ew-vXQ"/>
+                            <constraint firstItem="xbD-tb-Bcm" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="hua-L3-dlq"/>
+                            <constraint firstAttribute="trailing" secondItem="xbD-tb-Bcm" secondAttribute="trailing" id="qOc-2b-XKC"/>
+                            <constraint firstItem="xbD-tb-Bcm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ug9-ri-xg3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="directionLabel" destination="4xe-lF-Mvf" id="bCQ-eC-yYw"/>
+                        <outlet property="homeButton" destination="YeT-V3-wDn" id="a3L-RA-kMx"/>
+                        <outlet property="nextButton" destination="tGc-Xp-1Y4" id="Vb4-N3-om0"/>
+                        <outlet property="playButton" destination="e0N-kG-XtG" id="oMr-sS-XKy"/>
+                        <outlet property="termLabel" destination="Mai-oE-ngc" id="Xiz-8d-sQR"/>
+                        <outlet property="timerLabel" destination="rOk-Nr-mJA" id="0gC-cD-7fH"/>
+                        <outlet property="titleLabel" destination="ZCF-2E-HhO" id="Qxd-g4-NLT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="291" y="388"/>
         </scene>
     </scenes>
 </document>
